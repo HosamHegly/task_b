@@ -24,12 +24,15 @@ int main()
      //open log and write in it
      openlog("myDaemon", LOG_PID, LOG_DAEMON);
      syslog(LOG_NOTICE, "deamon started");
-     usleep(3000000);
+     sleep(1);
      syslog(LOG_NOTICE, "deamon doing work");
-     usleep(3000000);
+     sleep(1);
      syslog(LOG_NOTICE, "deamon ending");
    }
   else
+{
+   sleep(5);
     printf("deamon pid is%d\n",id);
+}
 return 0;
 }

@@ -30,14 +30,15 @@ int run3 (void * params)
 int main()
 {
    //create 2 clone threads on the same level of the main thread
-  int cln=clone(run1,childstack+STACK_SIZE,CLONE_PARENT,0);
-  int clnn=clone(run2,childstack+STACK_SIZE,CLONE_PARENT,0);
+  int cln=clone(run1,childstack+STACK_SIZE,0,0);
+  int clnn=clone(run2,childstack+STACK_SIZE,0,0);
 
-  int clnnn=clone(run3,childstack+STACK_SIZE,CLONE_PARENT,0);
+  int clnnn=clone(run3,childstack+STACK_SIZE,0,0);
 
   printf("clone result 1 = %d\n", cln);
     printf("clone result 2 = %d\n", clnn);
     printf("clone result 2 = %d\n", clnnn);
+sleep(5);
 
  return 0;
 }
