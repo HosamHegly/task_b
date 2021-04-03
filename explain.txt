@@ -1,0 +1,9 @@
+subtask 3: 
+after we created the daemon thread we ran it in one terminal and opened another terminal and in that terminal we wrote the command cat /var/log/syslog and we saw that our daemon thread worked.
+in the last few lines in the syslog the daemon wrote the lines we we wrote in the code
+(grep didnt work for some reason)
+
+subtask 4:
+we did the same thing as in subtask 2
+we cloned the our program 3 times using  the clone call and for each clone we ran a diffrent function that runs one of the main tasks
+
